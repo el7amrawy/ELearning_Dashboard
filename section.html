@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard - Course Section</title>
+  <link rel="stylesheet" href="/assets/dashboard/css/output.css" />
+</head>
+
+<body class="bg-white relative">
+  <div id="app" class="relative">
+    <nav id="navbar-main" class="navbar is-fixed-top">
+      <div class="navbar-brand">
+        <a class="navbar-item mobile-aside-button">
+          <span onclick="tableFixed()" class="icon"><i class="mdi mdi-forwardburger mdi-24px"></i></span>
+        </a>
+      </div>
+      <div class="navbar-brand is-right">
+        <a class="navbar-item --jb-navbar-menu-toggle" data-target="navbar-menu">
+          <span class="icon"><i class="mdi mdi-dots-vertical mdi-24px"></i></span>
+        </a>
+      </div>
+      <div class="navbar-menu" id="navbar-menu">
+        <div class="navbar-end">
+          <div class="navbar-item dropdown has-divider has-user-avatar">
+            <a class="navbar-link">
+              <div class="user-avatar">
+                <img src="https://avatars.dicebear.com/v2/initials/john-doe.svg" alt="John Doe" class="rounded-full" />
+              </div>
+              <div class="is-user-name"><span>John Doe</span></div>
+              <span class="icon"><i class="mdi mdi-chevron-down"></i></span>
+            </a>
+            <div class="navbar-dropdown">
+              <a href="profile.html" class="navbar-item">
+                <span class="icon"><i class="mdi mdi-account"></i></span>
+                <span>My Profile</span>
+              </a>
+              <a class="navbar-item">
+                <span class="icon"><i class="mdi mdi-settings"></i></span>
+                <span>Settings</span>
+              </a>
+              <hr class="navbar-divider" />
+              <a class="navbar-item">
+                <span class="icon"><i class="mdi mdi-logout"></i></span>
+                <span>Log Out</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <aside class="aside is-placed-left is-expanded">
+      <div class="aside-tools">
+        <div>ELearning <b class="font-black">Admin</b></div>
+      </div>
+      <div class="menu is-menu-main">
+        <p class="menu-label">General</p>
+        <ul class="menu-list">
+          <li>
+            <a href="index.html">
+              <span class="icon"><i class="mdi mdi-desktop-mac"></i></span>
+              <span class="menu-item-label">Dashboard</span>
+            </a>
+          </li>
+          <li class="active">
+            <a href="courses.html">
+              <span class="icon"><i class="mdi mdi-bookshelf"></i></span>
+              <span class="menu-item-label">Courses</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <!-------------------------------------------- Add below -------------------------------------------->
+    <section class="section main-section">
+      <header class="card-header my-2 border-2">
+        <p class="card-header-title">
+          <span class="icon"><i class="mdi mdi-bookshelf"></i></span>
+          Section details
+        </p>
+        <a onclick="location.reload()" class="card-header-icon">
+          <span class="icon"><i class="mdi mdi-reload"></i></span>
+        </a>
+      </header>
+      <div class="section-edit py-4">
+        <table class="section-table table-auto my-4 border-2">
+          <tr>
+            <th class="py-2 px-2 capitalize font-medium text-sm  md:text-md lg:text-lg bg-slate-500/10 border-2">name
+            </th>
+            <td class="section-name py-2 px-2 capitalize font-medium text-sm  md:text-md lg:text-lg border-2">Lorem
+              ipsum dolor
+              sit.
+            </td>
+          </tr>
+          <tr>
+            <th class="py-2 px-2 capitalize font-medium text-sm  md:text-md lg:text-lg bg-slate-500/10 border-2">Course
+            </th>
+            <td class="py-2 px-2 capitalize font-medium text-sm  md:text-md lg:text-lg border-2">FrontEnd</td>
+          </tr>
+          <tr>
+            <th class="py-2 px-2 capitalize font-medium text-sm  md:text-md lg:text-lg bg-slate-500/10 border-2">
+              Lectures</th>
+            <td class="py-2 px-2 capitalize font-medium text-sm  md:text-md lg:text-lg border-2">5</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="flex items-center justify-start gap-4 mt-7 mb-5">
+        <span onclick="editName()" class="button bg-gray-500 hover:bg-gray-600 text-white"><i
+            class="mdi mdi-square-edit-outline"></i>
+          Edit</span>
+        <span class="button red"><i class="mdi mdi-delete"></i> Delete</span>
+        <a href="#" class="button blue">Back to Sections</a>
+      </div>
+
+      <div class="card has-table">
+        <header class="card-header border-2">
+          <p class="card-header-title text-2xl">
+            Lectures
+          </p>
+          <div class="card-header-icon">
+            <button class="button blue" onclick="openLecPop()">Add</button>
+          </div>
+        </header>
+        <div class="card-content">
+          <table>
+            <thead class="bg-blue-200">
+              <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Video</th>
+                <th>Material</th>
+                <th>Created At</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Lec 1</td>
+                <td>Unlock the power....</td>
+                <td>
+                  <a href="#" class="text-blue-600">Video</a>
+                </td>
+                <td><a href="#" class="text-blue-600">Link</a></td>
+                <td>12-12-2024</td>
+                <td class="actions-cell">
+                  <div class="buttons right nowrap">
+                    <button class="button small bg-gray-500 hover:bg-gray-600 text-white --jb-modal"
+                      data-target="sample-modal-2" type="button" onclick="edit()">
+                      <span class="icon"><i class="mdi mdi-square-edit-outline"></i></span>
+                    </button>
+                    <button class="button small red --jb-modal" data-target="sample-modal" type="button">
+                      <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+  <div class="popup">
+    <form
+      class="popup-sections fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 bg-white border-2 rounded-md shadow-lg w-72 h-52 hidden flex-col justify-center items-center py-2 px-2 gap-10">
+      <div class="edit w-full">
+        <p class="capitalize text-black/50 font-bold">Name</p>
+        <input class="name-typed border-2 rounded-md mt-2 outline-none p-2 w-full" type="text" />
+      </div>
+      <div class="btns flex justify-center gap-2">
+        <button class="button green" type="submit">Save</button>
+        <span class="button red" onclick="cancelPop()">Cancel</span>
+      </div>
+    </form>
+
+    <form>
+      <div
+        class="pop-lec hidden py-4 px-2 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 bg-white shadow-lg gap-2">
+        <div class="col-one">
+          <div class="capitalize px-2 py-2 flex flex-col gap-3">
+            <label for="name-lec">name</label>
+            <input required class="name-lec border-2 rounded-md outline-none py-2 px-2 md:min-w-80" type="text"
+              name="name-lec" id="name-lec" />
+          </div>
+          <div class="capitalize px-2 py-2 flex flex-col gap-3">
+            <label for="description">description</label>
+            <textarea name="description" id="description" class="resize-none h-32 border-2 rounded-md "></textarea>
+          </div>
+          <button class="button green" type="submit">Add</button>
+          <span class="button red" onclick="cancelLecPop()">Cancel</span>
+        </div>
+        <div class="col-two">
+          <div class="capitalize px-2 py-2 flex flex-col gap-3">
+            <label for="video">video URL</label>
+            <input required class="video border-2 rounded-md outline-none py-2 px-2 md:min-w-80" type="text"
+              name="video" id="video" />
+          </div>
+          <div class="capitalize px-2 py-2 flex flex-col gap-3">
+            <label for="material">material</label>
+            <input required class="material border-2 rounded-md outline-none py-2 px-2 md:min-w-80" type="text"
+              name="material" id="material" />
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <!--------------------------------------------------------------------------------------------------->
+  <script type="text/javascript" src="/assets/dashboard/js/main.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.9.95/css/materialdesignicons.min.css" />
+  <script src="/assets/dashboard/js/section-edit.js"></script>
+</body>
+
+</html>

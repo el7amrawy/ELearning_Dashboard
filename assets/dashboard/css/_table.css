@@ -3,13 +3,13 @@ table {
 }
 
 thead {
-  /* @apply hidden lg:table-header-group; */
+  @apply hidden lg:table-header-group;
 }
 
-/* tr {
+tr {
   @apply max-w-full block relative border-b-4 border-gray-100
     lg:table-row lg:border-b-0;
-} */
+}
 
 tr:last-child {
   @apply border-b-0;
@@ -19,10 +19,10 @@ th {
   @apply lg:text-left lg:py-2 lg:px-3;
 }
 
-/* td {
+td {
   @apply flex justify-between text-right py-3 px-4 align-top border-b border-gray-100
     lg:table-cell lg:text-left lg:py-2 lg:px-3 lg:align-middle lg:border-b-0;
-} */
+}
 
 tr:nth-child(odd) td {
   @apply lg:bg-gray-50;
@@ -38,7 +38,7 @@ tbody tr:hover td {
 
 td:before {
   content: attr(data-label);
-  /* @apply font-semibold pr-3 text-left lg:hidden; */
+  @apply font-semibold pr-3 text-left lg:hidden;
 }
 
 td.checkbox-cell, th.checkbox-cell {
