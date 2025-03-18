@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard - Home</title>
+    <link rel="stylesheet" href="/assets/dashboard/css/output.css" />
+  </head>
+  <body>
+    <div id="app">
+      <nav id="navbar-main" class="navbar is-fixed-top">
+        <div class="navbar-brand">
+          <a class="navbar-item mobile-aside-button">
+            <span class="icon"
+              ><i class="mdi mdi-forwardburger mdi-24px"></i
+            ></span>
+          </a>
+        </div>
+        <div class="navbar-brand is-right">
+          <a
+            class="navbar-item --jb-navbar-menu-toggle"
+            data-target="navbar-menu"
+          >
+            <span class="icon"
+              ><i class="mdi mdi-dots-vertical mdi-24px"></i
+            ></span>
+          </a>
+        </div>
+        <div class="navbar-menu" id="navbar-menu">
+          <div class="navbar-end">
+            <div class="navbar-item dropdown has-divider has-user-avatar">
+              <a class="navbar-link">
+                <div class="user-avatar">
+                  <img
+                    src="https://avatars.dicebear.com/v2/initials/john-doe.svg"
+                    alt="John Doe"
+                    class="rounded-full"
+                  />
+                </div>
+                <div class="is-user-name"><span>John Doe</span></div>
+                <span class="icon"><i class="mdi mdi-chevron-down"></i></span>
+              </a>
+              <div class="navbar-dropdown">
+                <a href="profile.html" class="navbar-item">
+                  <span class="icon"><i class="mdi mdi-account"></i></span>
+                  <span>My Profile</span>
+                </a>
+                <a class="navbar-item">
+                  <span class="icon"><i class="mdi mdi-settings"></i></span>
+                  <span>Settings</span>
+                </a>
+                <hr class="navbar-divider" />
+                <a class="navbar-item">
+                  <span class="icon"><i class="mdi mdi-logout"></i></span>
+                  <span>Log Out</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <aside class="aside is-placed-left is-expanded">
+        <div class="aside-tools">
+          <div>ELearning <b class="font-black">Admin</b></div>
+        </div>
+        <div class="menu is-menu-main">
+          <p class="menu-label">General</p>
+          <ul class="menu-list">
+            <li>
+              <a href="index.html">
+                <span class="icon"><i class="mdi mdi-desktop-mac"></i></span>
+                <span class="menu-item-label">Dashboard</span>
+              </a>
+            </li>
+            <li class="active">
+              <a href="courses.html">
+                <span class="icon"><i class="mdi mdi-bookshelf"></i></span>
+                <span class="menu-item-label">Courses</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+      <!-------------------------------------------- Add below -------------------------------------------->
+      <section class="section main-section">
+        <main class="p-6">
+
+        
+          <!-- Table Section -->
+          <section class=" w-full pb-10" dir="ltr">
+              <div class="">
+                  <table class="w-full bg-white border border-gray-300">
+                      <tbody id="carTableBody">
+                          <tr class=" col-span-1">
+                              <td class=" hover:bg-blue-200 px-4 py-3 border text-center font-bold text-lg">image *</td>
+                              <td class="px-4 py-3 border ">
+                                  <img src="/assets/images/courses/courses-22.jpg" alt="" class="w-[90px] mx-auto">
+                              </td>
+                          </tr>
+                          <tr class=" col-span-1">
+                              <td class=" hover:bg-blue-200 px-4 py-3 border text-center font-bold text-lg">Name :</td>
+                              <td class="px-4 py-3 border text-center font-semibold">
+                                  JavaScript Course
+                              </td>
+                          </tr>
+                          <tr class=" col-span-1">
+                              <td class=" hover:bg-blue-200 px-4 py-3 border text-center font-bold text-lg">Course Id :</td>
+                              <td class="px-4 py-3 border text-center font-semibold">
+                                  17890
+                              </td>
+                          </tr>
+                          <tr class=" col-span-1">
+                              <td class=" hover:bg-blue-200 px-4 py-3 border text-center font-bold text-lg">Lecture :</td>
+                              <td class="px-4 py-3 border text-center font-semibold">
+                                  10 Lectures
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+                  <div class="flex items-center justify-start gap-4 mt-7 mb-5">
+                      <a href="" class="flex items-center justify-center gap-2 bg-gray-500 text-white px-4 py-2 rounded-md">
+                          <i class="mdi mdi-file-edit text-xl"></i>
+                          <span>Edit</span>
+                      </a>
+                      <a href="" class="flex items-center justify-center gap-2 bg-red-500 text-white px-4 py-2 rounded-md">
+                          <i class="mdi mdi-trash-can-outline text-xl"></i>
+                          <span>Delete</span>
+                      </a>
+                      <a href="" class="flex items-center justify-center gap-2 bg-transparent border text-blue-500 px-4 py-2 rounded-md">
+                          <i class="mdi mdi-arrow-left-bold-hexagon-outline text-xl"></i>
+                          <span>back to list</span>
+                      </a>
+                  </div>
+              </div>
+          </section>
+          <hr>
+                          <!-- Section Title -->
+                          <section class="mb-6 mt-5">
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center justify-center gap-3">
+                                    <h3 class="font-bold text-xl">EduMall Editor</h3>
+                
+                                </div>
+                                <div class="flex items-center space-x-7">
+                                    <i class="mdi mdi-settings text-xl"></i>
+                                    <button class="bg-secondary px-4 py-3 rounded-lg text-white bg-blue-900" id="createBtn">Add
+                                        Section</button>
+                                </div>
+                            </div>
+                        </section>
+          <section class=" w-full pt-10" dir="ltr">
+              <div class="">
+                  <table class="w-full bg-white border border-gray-300">
+                      <thead class="bg-gray-600 text-white text-center font-bold">
+                          <tr class="">
+                              <th class="px-6 py-3 border text-center">Name</th>
+                              <th class="px-6 py-3 border text-center">Created At</th>
+                              <th class="px-6 py-3 border text-center">Action</th>
+                          </tr>
+                      </thead>
+                      <tbody id="carTableBody">
+                          <tr class="hover:bg-gray-50 text-center">
+                              <td class="px-6 py-4 border">html course</td>
+                              <td class="px-6 py-4 border">10-7-2024 4.25pm</td>
+                              <td class="px-5 py-4 border">
+                                  <div class="flex items-center justify-center gap-2">
+                                      <button class="bg-blue-600 text-white px-4  py-2 rounded text-sm hover:bg-blue-700">
+                                          <div  class="flex items-center justify-center gap-1 ">
+                                              <i class="mdi mdi-eye-check text-xl"></i>
+                                              <a href="" class="font-bold">View</a>
+                                          </div>
+                                      </button>
+                                      <button
+                                          class="bg-green-600 text-white px-4  py-2 rounded text-sm hover:bg-green-700">
+                                      <div class="flex items-center justify-center gap-1 ">
+                                          <i class="mdi mdi-file-edit-outline text-xl"></i>
+                                          <a href="" class="font-bold"> Edit</a>
+                                      </div>
+                                      </button>
+                                      <button class="bg-red-600 text-white px-4 py-2 rounded text-sm hover:bg-red-700">
+                                          <div class="flex items-center justify-center gap-1 ">
+                                              <i class="mdi mdi-trash-can-outline text-xl"></i>
+                                              <a href="" class="font-bold">Delete</a>
+                                          </div>
+                                      </button>
+                                  </div>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </section>
+      </main>
+  
+      <!-- end table -->
+      <!-- Add Create Car Modal -->
+
+</div>
+      </section>
+      <!--------------------------------------------------------------------------------------------------->
+    </div>
+    <script
+      type="text/javascript"
+      src="/assets/dashboard/js/main.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.materialdesignicons.com/4.9.95/css/materialdesignicons.min.css"
+    />
+  </body>
+</html>

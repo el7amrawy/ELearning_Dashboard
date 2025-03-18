@@ -1,3 +1,5 @@
+
+import plugin from "tailwindcss/plugin";
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["*.html"],
@@ -11,6 +13,14 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(({ addUtilities }) => {
+      addUtilities({
+        ".field-sizing-content": {
+          "field-sizing": "content",
+        },
+      });
+    }),
+  ],
 }
 

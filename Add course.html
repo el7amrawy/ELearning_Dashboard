@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard - Home</title>
+    <link rel="stylesheet" href="/assets/dashboard/css/output.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      <nav id="navbar-main" class="navbar is-fixed-top">
+        <div class="navbar-brand">
+          <a class="navbar-item mobile-aside-button">
+            <span class="icon"
+              ><i class="mdi mdi-forwardburger mdi-24px"></i
+            ></span>
+          </a>
+        </div>
+        <div class="navbar-brand is-right">
+          <a
+            class="navbar-item --jb-navbar-menu-toggle"
+            data-target="navbar-menu"
+          >
+            <span class="icon"
+              ><i class="mdi mdi-dots-vertical mdi-24px"></i
+            ></span>
+          </a>
+        </div>
+        <div class="navbar-menu" id="navbar-menu">
+          <div class="navbar-end">
+            <div class="navbar-item dropdown has-divider has-user-avatar">
+              <a class="navbar-link">
+                <div class="user-avatar">
+                  <img
+                    src="https://avatars.dicebear.com/v2/initials/john-doe.svg"
+                    alt="John Doe"
+                    class="rounded-full"
+                  />
+                </div>
+                <div class="is-user-name"><span>John Doe</span></div>
+                <span class="icon"><i class="mdi mdi-chevron-down"></i></span>
+              </a>
+              <div class="navbar-dropdown">
+                <a href="profile.html" class="navbar-item">
+                  <span class="icon"><i class="mdi mdi-account"></i></span>
+                  <span>My Profile</span>
+                </a>
+                <a class="navbar-item">
+                  <span class="icon"><i class="mdi mdi-settings"></i></span>
+                  <span>Settings</span>
+                </a>
+                <hr class="navbar-divider" />
+                <a class="navbar-item">
+                  <span class="icon"><i class="mdi mdi-logout"></i></span>
+                  <span>Log Out</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <aside class="aside is-placed-left is-expanded">
+        <div class="aside-tools">
+          <div>ELearning <b class="font-black">Admin</b></div>
+        </div>
+        <div class="menu is-menu-main">
+          <p class="menu-label">General</p>
+          <ul class="menu-list">
+            <li>
+              <a href="index.html">
+                <span class="icon"><i class="mdi mdi-desktop-mac"></i></span>
+                <span class="menu-item-label">Dashboard</span>
+              </a>
+            </li>
+            <li class="active">
+              <a href="courses.html">
+                <span class="icon"><i class="mdi mdi-bookshelf"></i></span>
+                <span class="menu-item-label">Courses</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+      <!-------------------------------------------- Add below -------------------------------------------->
+      <section class="section main-section ">
+        <div
+          class="bg-transparent p-6 rounded-lg max-w-7xl w-full  mx-auto relative"
+        >
+          <h2 class="text-2xl font-bold mb-4">Add New Course</h2>
+          <form id="createForm" class="grid grid-cols-1 md:grid-cols-2 gap-7">
+            <!-- Left Column -->
+            <div class="space-y-7">
+              <div class="mx-auto rounded-lg mt-5">
+                <div
+                  id="preview-container"
+                  class="border-2 border-gray-300 rounded-lg mb-4 p-1 h-52 flex items-center justify-center"
+                >
+                
+                  <div
+                    id="default-preview"
+                    class="bg-white w-full h-full rounded flex items-center justify-center"
+                    >
+                    <img
+                    id="image-preview"
+                    class="max-h-full max-w-full object-contain"
+                    alt=""
+                    src="/assets/dashboard/images/download (2).webp"
+                  />
+                </div>
+
+
+                </div>
+                <div class="mt-5">
+                  <input
+                    id="example1"
+                    type="file"
+                    class="mt-2 block w-full text-sm file:mr-4 rounded-md  file:border-0 border-2 border-gray-300 file:bg-blue-600 file:py-2 file:px-4 file:text-sm file:font-semibold file:text-white hover:file:bg-blue-700 focus:outline-none disabled:pointer-events-none disabled:opacity-60"
+                  />
+                </div>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700"
+                  >Course Name</label
+                >
+                <input
+                  type="text"
+                  class="mt-1 border-2 border-gray-300 block w-full  rounded-md p-2"
+                  required
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700"
+                  >Description</label
+                >
+                <textarea name="" id="" class="mt-1 resize-none border-2 border-gray-300 block w-full  rounded-md p-2 field-sizing-content max-h-[200px]"></textarea>
+              </div>
+
+              <div>
+                <label class="block text-sm font-medium text-gray-700"
+                  >Status</label
+                >
+                <select
+                  class="mt-1 block w-full border-2 border-gray-300 rounded-md p-2"
+                  required
+                >
+                  <option value="Available">Available</option>
+                  <option value="Rented">Not Available</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="space-y-12 ">
+              <div class="mt-5">
+                <label class="block text-sm font-medium text-gray-700"
+                  >Year</label
+                >
+                <input
+                  type="number"
+                  class="mt-1 block w-full border-2 border-gray-300 rounded-md p-2"
+                  required
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700"
+                  >Level</label
+                >
+                <select
+                  class="mt-1 block w-full border-2 border-gray-300 rounded-md p-2"
+                  required
+                >
+                  <option value="Advanced">Advanced</option>
+                  <option value="Mid Level">Mid Level</option>
+                  <option value="Beginner">Beginner</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700"
+                  >Language</label
+                >
+                <select
+                  class="mt-1 block w-full border-2 border-gray-300 rounded-md p-2"
+                  required
+                >
+                  <option value="Advanced">English</option>
+                  <option value="Mid Level">Arabic</option>
+                  <option value="Beginner">Russian</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700"
+                  >Instructor</label
+                >
+                <select
+                  class="mt-1 block w-full border-2 border-gray-300 rounded-md p-2"
+                  required
+                >
+                  <option value="Advanced">Ali hamdy</option>
+                  <option value="Mid Level">zema</option>
+                  <option value="Beginner">mohamed</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700"
+                  >Price</label
+                >
+                <input
+                  type="number"
+                  class="mt-1 block w-full border-2 border-gray-300 rounded-md p-2"
+                  required
+                />
+              </div>
+            </div>
+
+            <!-- Form Buttons -->
+            <div class="col-span-2 flex justify-start space-x-3 mt-4">
+              <button
+                type="submit"
+                class="px-4 py-2 bg-secondary bg-blue-500 text-white rounded hover:bg-primary"
+              >
+                Create Course
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <!--------------------------------------------------------------------------------------------------->
+    </div>
+    <script
+      type="text/javascript"
+      src="/assets/dashboard/js/main.min.js"
+    ></script>
+    <script src="/assets/dashboard/js/upload photo.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.materialdesignicons.com/4.9.95/css/materialdesignicons.min.css"
+    />
+  </body>
+</html>
